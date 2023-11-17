@@ -26,7 +26,7 @@ abstract class House {
   }
 
   public comeIn(person: Person): void {
-    if (this.tenants) {
+    if (this.door) {
       this.tenants.push(person);
     }
   }
@@ -43,7 +43,7 @@ class MyHouse extends House {
   }
 }
 
-const key = new Key(5);
+const key = new Key(3);
 
 const house = new MyHouse(key);
 const person = new Person(key);
